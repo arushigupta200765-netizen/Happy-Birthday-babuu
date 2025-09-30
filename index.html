@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday babu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #ffc0c0;
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    .button-container {
+      margin: 20px;
+    }
+
+    button {
+      background: #fc94af;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: #ff3399;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .birthday-pic {
+      width: 250px;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+
+    .cards, .moment-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card, .moment-card {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .card img, .moment-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .letter-box {
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .signature {
+      display: block;
+      margin-top: 20px;
+      font-style: italic;
+      text-align: right;
+    }
+
+    /* Hearts animation */
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 9999;
+    }
+
+    .hearts::after {
+      content: "❤️";
+      position: absolute;
+      animation: float 3s linear infinite;
+      font-size: 24px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1;}
+      100% { transform: translateY(-800px) rotate(360deg); opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music -->
+  <audio id="bg-music" src="https://www.dropbox.com/scl/fi/imppi7owox2ad3r2p8nf7/Perfect-Mr-Jat.in.mp3?rlkey=xz088yv1jdm5w34yblbfifpic&st=j5fee3vj&dl=1" loop></audio>
+  <button id="music-toggle" onclick="toggleMusic()">🔈</button>
+
+  <!-- Floating hearts -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- PAGE 1 -->
+  <div class="page active" id="page1">
+    <h1>🎀 Happy Birthday Praneeth, my baby🎀</h1>
+    <img src="https://i.postimg.cc/7hBJ7wP1/ec40c23be2c5ba9f7e9a8745760c7ec9.jpg" class="birthday-pic">
+    <div class="button-container">
+      <button onclick="showPage(2)">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page2">
+    <h1>🎀To my baby🎀</h1>
+    <p>Praneeth, my baby, can you believe it like even in this long ass distance We are still here, together, getting stronger and bond deepening, i still can't believe you are still here with me</p>
+    <p>Remembering back then when we first talked and now looking at us, haha i mean look how far we have came together, Even though there were times when we felt down, distant, far away, separated and almost ended things, but i never had the thoughts of leaving you, we are still here today, together forever, stronger and this is how I want us to be forever</p>
+    <p>You are my better and other half, i don't wanna lose this one, let's stick together till death do us apart I have a lot of plans for us, and I want them to be with YOU, there's no me without you anymore, you matter a lot lot more than you might think, i find happiness in your, i feel safe with you, i feel comfortable, i feel free, i hope we stay this way forever</p>
+    <p>Okay sorry sorry this is supposed to be about you not me haha back to it, you know the first time we talked, i genuinely thought you were some boring ass adult, busy with shit tons of things and immediately thought him and I are not compatible at all now who would have thought you will have me stuck with you like a leech, and trust me when I say this, you are not getting away from me easily</p>
+    <p>I know i know words are not all that effective but i promise I'll show you everything I say, i mean it Well tbh past few months were really hard, i thought we were done for good, i mean distance really is scary sometimes but seems like my prayers worked and I got my praneeth back the one i know, thankyou for not giving up I'm so so grateful, i maybe not in a position to make your birthday any special, but i promise when I get the chance i won't let it slide, I'm just waiting for now, can't really do as much as you did, I'll just wait for my turn</p>
+    <p>Everything we have shared from our first call to our first fight lol, i cherish every single thing, thank you for making my life better and colourful As today it's your day baby, but i think I'm more excited than you areeee, the sweetest human was born today, and the best part is that he is my freaking boyfriend, like damn</p>
+    <div class="button-container">
+      <button onclick="showPage(1)">⬅ Back</button>
+      <button onclick="showPage(3)">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page" id="page3">
+    <h1>🎀things i love about you🎀</h1>
+    <div class="cards">
+      <div class="card"><p>1) your kind and charming personality, since the first day i loved it how you were always so disciplined and deliberate and always made sure i was happy and loved</p></div>
+      <div class="card"><p>2) your weird ass humour, even though it's not as good as mine but still you are funny (not more than me), i mean come on they are lame asf but still somehow you end up making me laugh</p></div>
+      <div class="card"><p>3) your small and warming efforts, though you would be busy all day you would still make out some time to talk to me and tell me you will be busy</p></div>
+      <div class="card"><p>4) how you have always been so understanding, whether it was my mood swings, when i couldn't text, when i couldn't call, you never once made me feel guilty about it or like i was wasting your time, you always understood and tried your best to console me</p></div>
+      <div class="card"><p>5) how i can freely talk to you about anything without any hesitation, how safe i feel sharing anything with you, whether its about my family, friends, things i don't understand and you explaining while making sure i don't feel dumb:3</p></div>
+      <div class="card"><p>6) how you have always given me reassurance whenever i felt down and had doubts without getting irritated for repeating the same thing</p></div>
+      <div class="card"><p>7) thank you for always tolerating my bullshit, when i was mean and rude to you for absolutely no reason and giving you the hard time or when i might have hurt you with something i didn't acknowledge, thank you for staying</p></div>
+    </div>
+    <div class="button-container">
+      <button onclick="showPage(2)">⬅ Back</button>
+      <button onclick="showPage(4)">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page" id="page4">
+    <h1>🎀things i wanna have with you🎀</h1>
+    <div class="cards">
+      <!-- Images with captions -->
+      <div class="card"><img src="https://i.postimg.cc/4ynHS8BG/IMG-20250916-185115.jpg"><p>meeting irl for the first time❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/V60WSkPn/IMG-20250916-185133.jpg"><p>sharing the longest hug❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/5NSqQrT7/IMG-20250916-185202.jpg"><p>having our first kiss❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/nrY77sRj/IMG-20250916-185224.jpg"><p>having each other in arms❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/mrzHjppG/IMG-20250916-185313.jpg"><p>supporting each other's goals❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/TYd5F3N0/IMG-20250916-185356.jpg"><p>getting married ❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/Y9tt0hWy/IMG-20250916-185331.jpg"><p>living in our own house ❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/zfrr2V0X/IMG-20250916-185253.jpg"><p>having a lot of pets❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/gJt1pJqh/IMG-20250916-185418.jpg"><p>making best memory❤️</p></div>
+      <div class="card"><img src="https://i.postimg.cc/ry0qmX0T/IMG-20250916-185431.jpg"><p>growing old together❤️</p></div>
+    </div>
+    <div class="button-container">
+      <button onclick="showPage(3)">⬅ Back</button>
+      <button onclick="showPage(5)">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div class="page" id="page5">
+    <h1>🎀my personal favourite moments 🎀</h1>
+    <div class="moment-grid">
+      <div class="moment-card"><img src="https://i.postimg.cc/mg0221P4/IMG-20250915-17044569.jpg"><p>20 October~im never forgetting this one the most iconic and funniest😭🧿</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/fTchgp81/Screenshot-2025-09-22-02-50-35-64-572064f74bd5f9fa804b05334aa4f912.jpg"><p>those random lame ah jokes i would die to hear again and again 😭🙏</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/Hxqf69Xp/Screenshot-2025-09-22-02-05-25-54-92460851df6f172a4592fca41cc2d2e6.jpg"><p>21st December~where it all began the best day of my life, the happiest🥹📌 🏠💍</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/8cbtLRbX/Screenshot-2025-09-22-02-12-29-36-6012fa4d4ddec268fc5c7112cbb265e7.jpg"><p>12 January~pulling the whole nighter and hearing the chirping of the birds in the morning 😭❤️</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/VsStMBKJ/IMG-20250922-03232246.jpg"><p>calling me "baby" "love" "wife" immediately making my day better😚❤️</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/VkF017kV/Screenshot-2025-09-22-02-05-35-14-92460851df6f172a4592fca41cc2d2e6.jpg"><p>and those cute and funny memes you would make of us 😭🎀</p></div>
+      <div class="moment-card"><img src="https://i.postimg.cc/vTLb9NkR/Screenshot-2025-09-22-02-07-17-39-6012fa4d4ddec268fc5c7112cbb265e7.jpg"><p>and in the end those goodnight paragraphs I would absolutely love to read😋❤️</p></div>
+    </div>
+    <div class="button-container">
+      <button onclick="showPage(4)">⬅ Back</button>
+      <button onclick="showPage(6)">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div class="page" id="page6">
+    <h1>My Heartfelt Message 💌</h1>
+    <div class="letter-box">
+      <p>Theres more i want to say, i dont think ill be able to fit everything here, but yk thankyou for everything praneeth, i hope this birthday brings you all joy and happiness and everything you desires and i hope all stress and problems in your life end soon, i love you so sooo much, may god give you all the happiness and peace, you are the best blessing god has blessed me, i wanted to do more but this was all i could come up with T.T not enough but im looking forward to the day when we will be able to celebrate your birthday together, making wishes, enjoying our own time, i love you sooo much, once again happy birthday, my baby ❤️</p>
+      <span class="signature">— yours love, Arushi</span>
+    </div>
+    <div class="button-container">
+      <button onclick="showPage(5)">⬅ Back</button>
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageNumber){
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      document.getElementById('page'+pageNumber).classList.add('active');
+    }
+
+    const music = document.getElementById('bg-music');
+    function toggleMusic() {
+      if(music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+</body>
+  </html>
